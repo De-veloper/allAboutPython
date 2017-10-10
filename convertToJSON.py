@@ -7,7 +7,7 @@ import json
 import os
 
 #global variable
-MASSAGE_TITLE = 'message below'
+from config import *
 
 project_name = ''
 
@@ -64,10 +64,6 @@ def showStatus(obj):
 #start a project
 def startUP(filename):
     startupCheck(filename)
-
-#Common functions
-def printMessage(titleTxt):
-    print '//----------------%s---------------//' % titleTxt
 
 #start run a new project
 startUP(raw_input("filename?"))
