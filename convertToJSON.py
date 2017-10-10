@@ -23,7 +23,7 @@ def startupCheck(filename):
         ori_data = json.loads(open(filename+'.json').read())
         showStatus(ori_data)
         
-        project_name = raw_input("Project name? (FB/GA)")
+        project_name = raw_input(PROJECT_NAME)
         if(project_name!=''):
         	#if ori date has project name exists, it will add the new obj in the same property
             if(ori_data.get(project_name)==None):
@@ -42,7 +42,7 @@ def startupCheck(filename):
         	exit()
     else:
         data = {}  
-        project_name = raw_input("Project name? (FB/GA)")
+        project_name = raw_input(PROJECT_NAME)
         data[project_name] = [] 
         data[project_name].append({ 
             'name':'curTime', 
@@ -66,7 +66,7 @@ def startUP(filename):
     startupCheck(filename)
 
 #start run a new project
-startUP(raw_input("filename?"))
+startUP(raw_input(FILE_NAME))
 
 
 
